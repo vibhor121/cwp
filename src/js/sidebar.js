@@ -1,20 +1,22 @@
 "use strict";
 
-import { api_key, fetchDataFromServer } from "./api.js";
+import { genreAPI, fetchDataFromServer } from "./api.js";
 
 export function sidebar() {
   const genreList = {};
 
-  fetchDataFromServer(
-    `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`,
-    function ({ genres }) {
-      for (const { id, name } of genres) {
-        genreList[id] = name;
-      }
+  fetchDataFromServer(`${genreAPI}`, function ({ genres }) {
+    // if (!genres) {
+    //   console.error("No genres found in the API response.");
+    //   return;
+    // }
 
-      genreLink();
+    for (const { id, name } of genres) {
+      genreList[id] = name;
     }
-  );
+
+    genreLink();
+  });
 
   const sidebarInner = document.createElement("div");
   sidebarInner.classList.add("sidebar-inner");
@@ -34,13 +36,6 @@ export function sidebar() {
 
     <div class="sidebar-footer">
       <p class="copyright">Copyright 2024 <a href="#">Masai Movies</a></p>
-
-      <img
-        src="./src/images/tmdb-logo.svg"
-        width="130"
-        height="17"
-        alt="the movie database logo"
-      />
     </div>
   `;
 
@@ -57,6 +52,10 @@ export function sidebar() {
     }
 
     const sidebar = document.querySelector("[sidebar]");
+    // if (!sidebar) {
+    //   console.error("Sidebar element not found.");
+    //   return;
+    // }
     sidebar.appendChild(sidebarInner);
     toggleSidebar(sidebar);
   };
@@ -64,10 +63,13 @@ export function sidebar() {
   const toggleSidebar = function (sidebar) {
     const sidebarBtn = document.querySelector("[menu-btn]");
     const sidebarTogglers = document.querySelectorAll("[menu-toggler]");
-
     const sidebarClose = document.querySelectorAll("[menu-close]");
-
     const overlay = document.querySelector("[overlay]");
+
+    // if (!sidebarBtn || !overlay) {
+    //   console.error("Sidebar button or overlay not found.");
+    //   return;
+    // }
 
     addEventOnElements(sidebarTogglers, "click", function () {
       sidebar.classList.toggle("active");
@@ -80,5 +82,11 @@ export function sidebar() {
       sidebarBtn.classList.remove("active");
       overlay.classList.remove("active");
     });
+  };
+
+  const addEventOnElements = function (elements, eventType, callback) {
+    for (const element of elements) {
+      element.addEventListener(eventType, callback);
+    }
   };
 }

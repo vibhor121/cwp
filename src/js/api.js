@@ -1,8 +1,11 @@
 "use strict";
 
-const api_key = "9fb242396d4c3dc826de84c6749003e4";
+const genreAPI = "https://sahilz9.github.io/CW-API/genre.json";
 
-const imageBaseURL = "https://image.tmdb.org/t/p/";
+const moviesAPI = "https://sahilz9.github.io/CW-API/data.json";
+
+const popularAPI = "https://sahilz9.github.io/CW-API/popular.json";
+// const imageBaseURL = "https://image.tmdb.org/t/p/";
 
 /*Fetching the data*/
 
@@ -12,4 +15,4 @@ const fetchDataFromServer = function (url, callback, optionalParam) {
     .then((data) => callback(data, optionalParam));
 };
 
-export { imageBaseURL, api_key, fetchDataFromServer };
+export { moviesAPI, genreAPI, popularAPI,fetchDataFromServer };
