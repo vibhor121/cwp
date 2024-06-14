@@ -70,7 +70,7 @@
         />
       </button>
 
-      <button class="menu-btn" menu-btn menu-toggle>
+      <button class="menu-btn" menu-btn menu-toggler>
         <img
           src="./src/images/menu.png"
           width="24"
@@ -87,101 +87,25 @@
           alt="close menu"
         />
       </button>
+      <div id="loginBtnContainer">
+        <button id="loginBtn">Login / SignUp</button>
+        <div id="userprofile-icon">
+          <img src="https://media.licdn.com/dms/image/C4D03AQFA9zzNa2zOsg/profile-displayphoto-shrink_200_200/0/1644760685717?e=1723680000&v=beta&t=qzO69q_9jgQ8TH2N-Wa4eGmgOVvc-Iqx2h6llR_clBw" class="profile-logo" alt="">
+        </div>
+      </div>
     </header>
 
     <!-- sidebar -->
 
-    <nav class="sidebar" sidebar>
-      <div class="sidebar-inner">
-        <div class="sidebar-list">
-          <p class="title">Genre</p>
-
-          <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link"
-            >Adventure</a
-          >
-          <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link">Sci-Fi</a>
-        </div>
-
-        <div class="sidebar-list">
-          <p class="title">Language</p>
-
-          <a href="./movie-list.html" menu-close class="sidebar-link"
-            >English</a
-          >
-          <a href="./movie-list.html" menu-close class="sidebar-link">Hindi</a>
-          <a href="./movie-list.html" menu-close class="sidebar-link"
-            >Bengali</a
-          >
-        </div>
-
-        <div class="sidebar-footer">
-          <p class="copyright">Copyright 2024 <a href="#">Masai Movies</a></p>
-
-          <img
-            src="./src/images/tmdb-logo.svg"
-            width="130"
-            height="17"
-            alt="the movie database logo"
-          />
-        </div>
-      </div>
-    </nav>
+    <nav class="sidebar" sidebar></nav>
 
     <div class="overlay" overlay menu-toggler></div>
 
     <article class="container" page-content>
       <!-- Banner -->
 
-      <section class="banner" aria-label="popular movies">
-        <!-- <<<<<<<<<<<<FIRST BANNER>>>>>>>>>>>> -->
+      <!-- <section class="banner" aria-label="popular movies">
         <div class="banner-slider">
-          <div class="slider-item active" slider-item>
-            <img
-              src="./src/images/slider-banner.jpg"
-              alt=""
-              class="img-cover"
-              loading="eager"
-            />
-
-            <div class="banner-content">
-              <h2 class="heading-content">Puss in Boots: The Last Wish</h2>
-
-              <div class="meta-list">
-                <div class="meta-item">2022</div>
-
-                <div class="meta-item card-badge">7.5</div>
-              </div>
-
-              <p class="genre">Animation, Action, Adventure</p>
-
-              <p class="banner-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium rem nisi nihil perspiciatis saepe quas aspernatur
-                reiciendis ipsum enim minus consectetur, dolorem labore quae
-                eligendi, alias ex praesentium repellat optio deserunt nostrum.
-                Saepe recusandae voluptas soluta labore sint consequuntur odit
-                doloremque in. Dignissimos velit porro expedita reiciendis illum
-                incidunt laboriosam.
-              </p>
-
-              <a href="./detail.html" class="btn">
-                <img
-                  src="./src/images/play_circle.png"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="play circle"
-                />
-
-                <span class="span">Watch Now</span>
-              </a>
-            </div>
-          </div>
-
           <div class="slider-item" slider-item>
             <img
               src="./src/images/slider-banner.jpg"
@@ -191,182 +115,10 @@
             />
 
             <div class="banner-content">
-              <h2 class="heading-content">Puss in Boots: The Last Wish</h2>
+              <h2 class="heading-content">Avengers: End Game</h2>
 
               <div class="meta-list">
-                <div class="meta-item">2022</div>
-
-                <div class="meta-item card-badge">7.5</div>
-              </div>
-
-              <p class="genre">Animation, Action, Adventure</p>
-
-              <p class="banner-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium rem nisi nihil perspiciatis saepe quas aspernatur
-                reiciendis ipsum enim minus consectetur, dolorem labore quae
-                eligendi, alias ex praesentium repellat optio deserunt nostrum.
-                Saepe recusandae voluptas soluta labore sint consequuntur odit
-                doloremque in. Dignissimos velit porro expedita reiciendis illum
-                incidunt laboriosam.
-              </p>
-
-              <a href="./detail.html" class="btn">
-                <img
-                  src="./src/images/play_circle.png"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="play circle"
-                />
-
-                <span class="span">Watch Now</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="slider-item" slider-item>
-            <img
-              src="./src/images/slider-banner.jpg"
-              alt=""
-              class="img-cover"
-              loading="eager"
-            />
-
-            <div class="banner-content">
-              <h2 class="heading-content">Puss in Boots: The Last Wish</h2>
-
-              <div class="meta-list">
-                <div class="meta-item">2022</div>
-
-                <div class="meta-item card-badge">7.5</div>
-              </div>
-
-              <p class="genre">Animation, Action, Adventure</p>
-
-              <p class="banner-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium rem nisi nihil perspiciatis saepe quas aspernatur
-                reiciendis ipsum enim minus consectetur, dolorem labore quae
-                eligendi, alias ex praesentium repellat optio deserunt nostrum.
-                Saepe recusandae voluptas soluta labore sint consequuntur odit
-                doloremque in. Dignissimos velit porro expedita reiciendis illum
-                incidunt laboriosam.
-              </p>
-
-              <a href="./detail.html" class="btn">
-                <img
-                  src="./src/images/play_circle.png"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="play circle"
-                />
-
-                <span class="span">Watch Now</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="slider-item" slider-item>
-            <img
-              src="./src/images/slider-banner.jpg"
-              alt=""
-              class="img-cover"
-              loading="eager"
-            />
-
-            <div class="banner-content">
-              <h2 class="heading-content">Puss in Boots: The Last Wish</h2>
-
-              <div class="meta-list">
-                <div class="meta-item">2022</div>
-
-                <div class="meta-item card-badge">7.5</div>
-              </div>
-
-              <p class="genre">Animation, Action, Adventure</p>
-
-              <p class="banner-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium rem nisi nihil perspiciatis saepe quas aspernatur
-                reiciendis ipsum enim minus consectetur, dolorem labore quae
-                eligendi, alias ex praesentium repellat optio deserunt nostrum.
-                Saepe recusandae voluptas soluta labore sint consequuntur odit
-                doloremque in. Dignissimos velit porro expedita reiciendis illum
-                incidunt laboriosam.
-              </p>
-
-              <a href="./detail.html" class="btn">
-                <img
-                  src="./src/images/play_circle.png"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="play circle"
-                />
-
-                <span class="span">Watch Now</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="slider-item" slider-item>
-            <img
-              src="./src/images/slider-banner.jpg"
-              alt=""
-              class="img-cover"
-              loading="eager"
-            />
-
-            <div class="banner-content">
-              <h2 class="heading-content">Puss in Boots: The Last Wish</h2>
-
-              <div class="meta-list">
-                <div class="meta-item">2022</div>
-
-                <div class="meta-item card-badge">7.5</div>
-              </div>
-
-              <p class="genre">Animation, Action, Adventure</p>
-
-              <p class="banner-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium rem nisi nihil perspiciatis saepe quas aspernatur
-                reiciendis ipsum enim minus consectetur, dolorem labore quae
-                eligendi, alias ex praesentium repellat optio deserunt nostrum.
-                Saepe recusandae voluptas soluta labore sint consequuntur odit
-                doloremque in. Dignissimos velit porro expedita reiciendis illum
-                incidunt laboriosam.
-              </p>
-
-              <a href="./detail.html" class="btn">
-                <img
-                  src="./src/images/play_circle.png"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="play circle"
-                />
-
-                <span class="span">Watch Now</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="slider-item" slider-item>
-            <img
-              src="./src/images/slider-banner.jpg"
-              alt=""
-              class="img-cover"
-              loading="eager"
-            />
-
-            <div class="banner-content">
-              <h2 class="heading-content">Puss in Boots: The Last Wish</h2>
-
-              <div class="meta-list">
-                <div class="meta-item">2022</div>
+                <div class="meta-item">2017</div>
 
                 <div class="meta-item card-badge">7.5</div>
               </div>
@@ -400,60 +152,10 @@
 
         <div class="slider-control">
           <div class="control-inner">
-            <button class="poster-box slider-item active">
-              <img
-                src="./src/images/slider-control.jpg"
-                alt="Slide to Puss in Boots: The Last Wish"
-                loading="lazy"
-                draggable="false"
-                class="img-cover"
-              />
-            </button>
-
             <button class="poster-box slider-item">
               <img
                 src="./src/images/slider-control.jpg"
-                alt="Slide to Puss in Boots: The Last Wish"
-                loading="lazy"
-                draggable="false"
-                class="img-cover"
-              />
-            </button>
-
-            <button class="poster-box slider-item">
-              <img
-                src="./src/images/slider-control.jpg"
-                alt="Slide to Puss in Boots: The Last Wish"
-                loading="lazy"
-                draggable="false"
-                class="img-cover"
-              />
-            </button>
-
-            <button class="poster-box slider-item">
-              <img
-                src="./src/images/slider-control.jpg"
-                alt="Slide to Puss in Boots: The Last Wish"
-                loading="lazy"
-                draggable="false"
-                class="img-cover"
-              />
-            </button>
-
-            <button class="poster-box slider-item">
-              <img
-                src="./src/images/slider-control.jpg"
-                alt="Slide to Puss in Boots: The Last Wish"
-                loading="lazy"
-                draggable="false"
-                class="img-cover"
-              />
-            </button>
-
-            <button class="poster-box slider-item">
-              <img
-                src="./src/images/slider-control.jpg"
-                alt="Slide to Puss in Boots: The Last Wish"
+                alt="Slide to Avengers: End Game"
                 loading="lazy"
                 draggable="false"
                 class="img-cover"
@@ -461,44 +163,12 @@
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Movie List -->
-
-      <section class="movie-list" aria-label="upcoming movie">
-        <div class="title-wrapper">
-          <h3 class="title-large">Upcoming Movies</h3>
-        </div>
-
-
-        <div class="slider-list">
-          <div class="slider-inner">
-
-
-            <div class="movie-card">
-
-              
-              <figure class="poster-box card-banner">
-                <img src="./src/images/slider-control.jpg" alt="puss in boots" class="img-cover">
-              </figure>
-
-              <h4 class="title">Puss in Boots: The Last Wish</h4>
-
-              <div class="meta-list">
-                <div class="meta-item">
-                  <img src="./src/images/star.png" width="20" height="20" loading="lazy" alt="" class="">
-                
-                <span class="span">8.4</span>
-                </div>
-
-                <div class="card-badge">2022</div>
-              </div>
-
-            <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- <section class="movie-list" aria-label="upcoming movie">
+        
+      </section> -->
     </article>
   </body>
 </html>
