@@ -56,6 +56,7 @@ export function sidebar() {
     //   console.error("Sidebar element not found.");
     //   return;
     // }
+    
     sidebar.appendChild(sidebarInner);
     toggleSidebar(sidebar);
   };

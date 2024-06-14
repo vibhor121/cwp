@@ -52,6 +52,10 @@ li {
   list-style-type: none;
 }
 
+.star-icon {
+  margin-left: 2em;
+}
+
 a,
 img,
 span,
@@ -170,6 +174,7 @@ body {
 
 .title {
   font-size: var(--fs-title);
+  margin: 0 0 0 2em;
 }
 
 .heading {
@@ -305,6 +310,40 @@ body {
 
 /*HEADER*/
 
+#userprofile-icon {
+  height: 70px;
+  width: 70px;
+  /* background-color: #db0028; */
+  border-radius: 50%;
+  /* background-image: url("https://media.licdn.com/dms/image/C4D03AQFA9zzNa2zOsg/profile-displayphoto-shrink_200_200/0/1644760685717?e=1723680000&v=beta&t=qzO69q_9jgQ8TH2N-Wa4eGmgOVvc-Iqx2h6llR_clBw"); */
+  /* object-fit: cover; */
+}
+
+.profile-logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#loginBtn {
+  color: var(--white);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-8);
+  transition: var(--transition-short);
+  background-color: #db0028;
+  height: 40px;
+  margin-top: 1em;
+}
+
+#loginBtn:hover{
+  background-color: #810018;
+  transition: 0.3s;
+}
+
 .header {
   position: relative;
   padding-block: 24px;
@@ -317,6 +356,11 @@ body {
 
 .header .logo {
   margin-inline-end: auto;
+}
+
+#loginBtnContainer {
+  display: flex;
+  gap: 10px;
 }
 
 .search-btn,
@@ -668,6 +712,22 @@ body {
 .movie-card .card-btn {
   position: absolute;
   inset: 0;
+}
+
+#seatBookingBtn {
+  color: var(--white);
+  font-size: var(--fs-button);
+  font-weight: var(--weight-bold);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  padding-inline: 20px 24px;
+  border-radius: var(--radius-8);
+  transition: var(--transition-short);
+  background-color: #db0028;
+  margin-bottom: 1em;
 }
 
 /*DETAILs PAge*/
