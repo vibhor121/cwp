@@ -122,6 +122,10 @@ function getCastNames(casts) {
   return castNames.join(", ");
 }
 
+seatBookingBtn.addEventListener("click", () => {
+  window.location.href = "pavan.html";
+});
+
 function getGenres(genres) {
   if (!Array.isArray(genres)) {
     console.error("Expected an array of genres");
