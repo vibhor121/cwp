@@ -329,17 +329,20 @@ body {
 
 #loginBtn {
   color: var(--white);
+  font-size: var(--fs-button);
+  font-weight: var(--weight-bold);
   max-width: max-content;
   display: flex;
   align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  padding-inline: 20px 24px;
   border-radius: var(--radius-8);
   transition: var(--transition-short);
   background-color: #db0028;
-  height: 40px;
-  margin-top: 1em;
 }
 
-#loginBtn:hover{
+#loginBtn:hover {
   background-color: #810018;
   transition: 0.3s;
 }

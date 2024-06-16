@@ -4,9 +4,14 @@
 
 import { sidebar } from "./sidebar.js";
 import { genreAPI, popularAPI, fetchDataFromServer } from "./api.js";
-import {createMovieCard} from "./movie-card.js";
+import { createMovieCard } from "./movie-card.js";
 
 const pageContent = document.querySelector("[page-content]");
+
+let loginBtn = document.querySelector("#loginBtn");
+let userprofileIcon = document.querySelector("#userprofileIcon");
+
+let userId = localStorage.getItem("userId");
 
 sidebar();
 
@@ -148,10 +153,13 @@ const heroBanner = function ({ results: movieList }) {
 
   // fetching data for the home page sections (top rated, upcoming, trending)
 
-
   //BUG FIX
   for (const { title, path } of homePageSections) {
-    fetchDataFromServer(`https://sahilz9.github.io/CW-API/${path}`, createMovieList, title);
+    fetchDataFromServer(
+      `https://sahilz9.github.io/CW-API/${path}`,
+      createMovieList,
+      title
+    );
   }
 };
 
@@ -200,13 +208,31 @@ const createMovieList = function ({ results: movieList }, title) {
         </div>
   `;
 
-  for(const movie of movieList){
-
+  for (const movie of movieList) {
     const movieCard = createMovieCard(movie);
 
     movieListElem.querySelector(".slider-inner").appendChild(movieCard);
   }
 
-
   pageContent.appendChild(movieListElem);
 };
+
+if (userId) {
+  userprofileIcon.innerHTML = `<img
+  src="https://media.licdn.com/dms/image/C4D03AQFA9zzNa2zOsg/profile-displayphoto-shrink_200_200/0/1644760685717?e=1723680000&v=beta&t=qzO69q_9jgQ8TH2N-Wa4eGmgOVvc-Iqx2h6llR_clBw"
+  class="profile-logo"
+  alt=""
+/>`;
+
+  loginBtn.style.display = "none";
+} else {
+  userprofileIcon.innerHTML = "";
+}
+
+loginBtn.addEventListener("click", () => {
+  window.location.href = "vibhorlogin.html";
+});
+
+userprofileIcon.addEventListener("click", () => {
+  window.location.href = "syedProfile.html";
+});
