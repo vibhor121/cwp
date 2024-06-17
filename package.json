@@ -1,0 +1,13 @@
+{
+  "name": "salesforce-sages_084",
+  "version": "1.0.0",
+  "description": "Masai Movies is an aggregator service for the entertainment industry whereby we can assist you with information and ticketing for movies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" ,
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
