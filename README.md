@@ -93,7 +93,7 @@ https://github.com/Sahilz9/Salesforce-Sages_084.git
 Happy Coding
 ```
 
-##  Some glimpse of our project
+## Glimpse of our project
 ![git readme001](https://github.com/Sahilz9/Salesforce-Sages_084/assets/103746983/a652197f-1ca1-4fc5-be25-6a8ff7e09b70)
 ![git readme002](https://github.com/Sahilz9/Salesforce-Sages_084/assets/103746983/c4fae657-fb8a-4054-b756-34d879a50f42)
 ![git readme003](https://github.com/Sahilz9/Salesforce-Sages_084/assets/103746983/64fde13a-1fb3-43c4-95bd-9389bd860d56)
